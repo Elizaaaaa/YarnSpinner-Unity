@@ -53,6 +53,10 @@ namespace Yarn.Unity
         /// cref="DialogueRunner"/>).
         public YarnProject YarnProject { get; set; }
 
+        public virtual void ResetProvider() 
+        { 
+        }
+
         /// <summary>
         /// Signals to the line provider that lines with the provided line
         /// IDs may be presented shortly.        

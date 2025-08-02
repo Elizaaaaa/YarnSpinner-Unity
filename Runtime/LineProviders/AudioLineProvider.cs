@@ -290,6 +290,11 @@ namespace Yarn.Unity
             }
         }
 
+        public override void ResetProvider()
+        {
+            _provider = null;
+        }
+
         public override bool LinesAvailable => provider.LinesAvailable;
 
         public override LocalizedLine GetLocalizedLine(Line line)

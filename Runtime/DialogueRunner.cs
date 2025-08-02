@@ -215,6 +215,7 @@ namespace Yarn.Unity
 
             if (lineProvider != null)
             {
+                lineProvider.ResetProvider();
                 lineProvider.YarnProject = newProject;
             }
             SetInitialVariables();
@@ -324,6 +325,10 @@ namespace Yarn.Unity
             // our prepareForLines delegate may be called.
             Dialogue.SetNode(startNode);
 
+            if (lineProvider != null && lineProvider.YarnProject != yarnProject)
+            {
+                lineProvider.YarnProject = yarnProject;
+            }
             if (lineProvider.LinesAvailable == false)
             {
                 // The line provider isn't ready to give us our lines
