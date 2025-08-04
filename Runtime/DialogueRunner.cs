@@ -1081,7 +1081,10 @@ namespace Yarn.Unity
 
         private void PrepareForLines(IEnumerable<string> lineIDs)
         {
-            lineProvider.PrepareForLines(lineIDs);
+            if (lineProvider != null)
+            {
+                lineProvider.PrepareForLines(lineIDs);
+            }
         }
 
         /// <summary>
