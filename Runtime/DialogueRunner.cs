@@ -1022,6 +1022,10 @@ namespace Yarn.Unity
 
             foreach (var dialogueView in dialogueViews)
             {
+                if (dialogueView == null || dialogueView.isActiveAndEnabled == false)
+                {
+                    continue;
+                }
                 dialogueView.InterruptLine(CurrentLine, () => DialogueViewCompletedInterrupt(dialogueView));
             }
         }
