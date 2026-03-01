@@ -1129,7 +1129,7 @@ namespace Yarn.Unity
             }
             
             CurrentLine = null;
-            Dialogue.Continue();
+            Dialogue?.Continue();
         }
 
         /// <summary>
